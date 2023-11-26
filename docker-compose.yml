@@ -1,0 +1,13 @@
+version: '3'
+services:
+  playground-web-frontend:
+    image: neogenkai/moviesfront:latest
+    environment:
+      PORT: 3000
+      PROXY_API: http://movieclient:8000/
+    ports:
+      - 3000:3000
+  playground-web-backend:
+    image: neogenkai/moviesapp:latest
+    ports:
+      - 8000:8000
