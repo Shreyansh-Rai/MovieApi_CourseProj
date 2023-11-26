@@ -14,4 +14,4 @@
     #        name: docker
     #        state: started
     - name: Running container
-      shell: /usr/local/bin/docker run -it -d -p 3000:3001 --name MOVIESFRONT neogenkai/moviesfront
+      shell: /usr/local/bin/docker run -it -d --name MOVIESFRONT neogenkai/moviesfront
