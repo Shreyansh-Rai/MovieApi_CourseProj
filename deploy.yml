@@ -23,4 +23,4 @@
         cmd: docker-compose pull
         chdir: ./
     - name: Running container
-      shell: docker-compose -f ~/docker-compose.yml up
+      shell: docker-compose -f ~/docker-compose.yml up -d
