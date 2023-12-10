@@ -11,7 +11,7 @@ import java.util.Optional;
 @Service
 public class MovieService {
     @Autowired
-    private MovieRepository movieRepository;
+    protected MovieRepository movieRepository;
     public List<Movie> allMovies(){
         return movieRepository.findAll(); //defined in mongo repo code.
     }

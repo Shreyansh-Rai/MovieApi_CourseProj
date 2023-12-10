@@ -34,4 +34,8 @@ public class MovieController {
         logger.info(log);
         return new ResponseEntity<Optional<Movie>>(movieService.singleMovie(imdbId), HttpStatus.OK);
     }
+    public String test()
+    {
+        return "test";
+    }
 }
