@@ -24,6 +24,7 @@ public class MovieController {
     public ResponseEntity<List<Movie>> getAllMovies()
     {
         logger.info("Get all movies executed");
+        logger.debug("Get all movies working");
         return new ResponseEntity<List<Movie>>(movieService.allMovies(), HttpStatus.OK);
     }
 
@@ -32,6 +33,7 @@ public class MovieController {
     {
         String log = "Single Movie queried : imdbId " + imdbId;
         logger.info(log);
+        logger.warn("Single query called return entity could be an optional value");
         return new ResponseEntity<Optional<Movie>>(movieService.singleMovie(imdbId), HttpStatus.OK);
     }
     public String test()

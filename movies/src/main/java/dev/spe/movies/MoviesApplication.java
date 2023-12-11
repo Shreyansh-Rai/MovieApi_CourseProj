@@ -20,6 +20,7 @@ public class MoviesApplication {
 	public String apiRoot()
 	{
 		logger.info("/ entered");
+		logger.debug("Endpoint working");
 		return "Hello World!";
 	}
 }

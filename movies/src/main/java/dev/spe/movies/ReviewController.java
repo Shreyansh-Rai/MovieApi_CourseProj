@@ -23,6 +23,12 @@ public class ReviewController {
     public ResponseEntity<Review> createReview(@RequestBody Map<String,String> payload){
         String log = "review entered for movie" + payload.get("imdbId") + " and body " + payload.get("reviewBody");
         logger.info(log);
+        logger.debug("Review being entered");
+        if(payload.isEmpty())
+        {
+            logger.warn("Empty Payload!");
+        }
+        else logger.warn("Payload valid!");
         //this tells the framework to insert the request body into a map of string to string.
         return new ResponseEntity<Review>( reviewService.createReview(payload.get("reviewBody"), payload.get("imdbId")), HttpStatus.CREATED);
 
